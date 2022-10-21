@@ -6,6 +6,15 @@ body {
   background-color: rgb(90, 1, 1);
 }
 
+.main {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10vw 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .keyBoard {
   background-color: gray;
   color: black;
@@ -17,19 +26,11 @@ body {
 }
 
 #validIndicator {
-  /* border-radius: 50%;
-    background: rgb(34, 34, 34);
-	  height: 2rem;
-	  width: 2rem;
-      
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
-    transform: scale(1);
-    animation: pulse 2s infinite; */
   background: black;
   border-radius: 50%;
   margin: 10px;
-  height: 20px;
-  width: 20px;
+  height: 40px;
+  width: 40px;
 
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
   transform: scale(1);
@@ -54,4 +55,26 @@ body {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
+}
+
+/* #newAccuracy {
+} */
+
+.startButton{
+  height: 2.5rem;
+  width: 4rem;
+  color: rgb(174, 140, 140);
+  background-color: rgba(42, 42, 123, 0.966);
+  border-radius: 10px;
+  font-size: larger;
+}
+
+#newScore{
+  width: 10rem;
+  height: 5rem;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
