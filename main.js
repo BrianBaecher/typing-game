@@ -84,9 +84,12 @@ function textInputHandler(e) {
 function buttonClick() {
   if (!running) {
     timer.reset();
+    console.log(timer.duration)
     running = true;
-    newWPM.textContent = "";
-    newAccuracy.textContent = "";
+    newWPM.textContent = "--";
+    newWPM.style.backgroundColor = "gray"
+    newAccuracy.textContent = "--";
+    newAccuracy.style.backgroundColor = "gray"
     let goal = kurtSentences[Math.floor(Math.random() * kurtSentences.length)];
     goalDisplay.textContent = goal;
     userText.textContent = "begin";

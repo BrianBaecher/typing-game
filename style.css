@@ -23,6 +23,9 @@ body {
 #userText,
 #targetText {
   color: burlywood;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  height: 3rem;
 }
 
 #validIndicator {
@@ -69,12 +72,68 @@ body {
   font-size: larger;
 }
 
-#newScore{
+.newScorePanel{
   width: 10rem;
   height: 5rem;
   border: 1px solid black;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 10px;
+}
+
+#newScoreText{
+  margin-top: .5rem;
+}
+
+.newScores{
+  border: 1px solid black;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#newAccuracy{
+  background-color: rgb(126, 133, 139);
+  border: 1px solid blue;
+  width: 3rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+#newWPM{
+  background-color: gray;
+  border: 1px solid blue;
+  width: 3rem;
+  text-align: center;
+}
+
+.averages{
+  margin: 1rem;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#accuracy{
+  /* width: -moz-fit-content; */
+  width: 45%;
+  background-color: rgb(188, 213, 213);
+  padding: 3%;
+  border-radius: 10px;
+  border: 1px solid pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#wpm{
+  width: 45%;
+  background-color: rgb(188, 213, 213);
+  padding: 3%;
+  border-radius: 10px;
+  border: 1px solid pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

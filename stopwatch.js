@@ -11,7 +11,7 @@ function Stopwatch() {
       throw new Error("already running");
     }
     running = true;
-    console.log("sw start")
+    console.log("sw start");
     startTime = new Date();
   };
 
@@ -26,10 +26,10 @@ function Stopwatch() {
   };
 
   this.reset = function () {
-    let startTime,
-      endTime,
-      duration = 0;
-    let running = false;
+    startTime = null;
+    endTime = null;
+    duration = 0;
+    running = false;
   };
 
   Object.defineProperty(this, "duration", {
