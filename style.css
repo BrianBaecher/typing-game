@@ -1,18 +1,37 @@
 * {
   box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background-color: rgb(90, 1, 1);
+  background-color: rgb(73, 108, 137);
 }
 
+
+
+#instDrop {
+  display: none;
+  position: absolute;
+  background-color: #201c1ca9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+
 .main {
-  border: 1px solid black;
+  height: 400px;
+  align-self: center;
+  background-color: rgb(18, 53, 82);
   border-radius: 10px;
   margin: 10vw 20vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: rgb(244, 218, 183);
 }
 
 .keyBoard {
@@ -22,10 +41,12 @@ body {
 
 #userText,
 #targetText {
-  color: burlywood;
+  text-align: center;
   margin-left: 3rem;
   margin-right: 3rem;
-  height: 3rem;
+  height: fit-content;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 #validIndicator {
@@ -60,79 +81,81 @@ body {
   }
 }
 
-/* #newAccuracy {
-} */
 
-.startButton{
+.startButton {
   height: 2.5rem;
   width: 4rem;
-  color: rgb(174, 140, 140);
-  background-color: rgba(42, 42, 123, 0.966);
+  color: rgb(244, 218, 183);
+  background-color: rgba(3, 22, 38);
   border-radius: 10px;
   font-size: larger;
 }
 
-.newScorePanel{
+.newScorePanel {
   width: 10rem;
   height: 5rem;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 10px;
 }
 
-#newScoreText{
-  margin-top: .5rem;
+#newScoreText {
+  width: 90%;
+  padding-right: 5%;
+  margin-top: 0.5rem;
+  font-size: smaller;
+  display: flex;
+  justify-content: space-between;
 }
 
-.newScores{
-  border: 1px solid black;
+.newScores {
   width: 90%;
   display: flex;
   justify-content: space-between;
 }
 
-#newAccuracy{
+#newAccuracy {
   background-color: rgb(126, 133, 139);
-  border: 1px solid blue;
   width: 3rem;
   text-align: center;
   font-weight: 800;
+  color: rgb(58, 34, 0);
 }
 
-#newWPM{
+#newWPM {
   background-color: gray;
-  border: 1px solid blue;
   width: 3rem;
   text-align: center;
+  color: rgb(58, 34, 0);
+  font-weight: 800;
 }
 
-.averages{
+.averages {
   margin: 1rem;
   width: 40%;
   display: flex;
   justify-content: space-between;
+  color: rgb(244, 218, 183);
+  font-weight: 700;
 }
 
-#accuracy{
+#accuracy {
   /* width: -moz-fit-content; */
   width: 45%;
-  background-color: rgb(188, 213, 213);
+  background-color: rgb(73, 108, 137);
   padding: 3%;
   border-radius: 10px;
-  border: 1px solid pink;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#wpm{
+#wpm {
   width: 45%;
-  background-color: rgb(188, 213, 213);
+  background-color: rgb(73, 108, 137);
   padding: 3%;
   border-radius: 10px;
-  border: 1px solid pink;
   display: flex;
   flex-direction: column;
   align-items: center;

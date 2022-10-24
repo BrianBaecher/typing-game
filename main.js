@@ -31,7 +31,7 @@ const stats = {
     }
   },
   avgWPM: function (x) {
-    console.log(this.wpmArray)
+    console.log(this.wpmArray);
     if (this.wpmArray !== []) {
       return this.wpmArray.reduce((a, b) => +a + +b, 0) / this.wpmArray.length;
     }
@@ -84,12 +84,12 @@ function textInputHandler(e) {
 function buttonClick() {
   if (!running) {
     timer.reset();
-    console.log(timer.duration)
+    console.log(timer.duration);
     running = true;
     newWPM.textContent = "--";
-    newWPM.style.backgroundColor = "gray"
+    newWPM.style.backgroundColor = "gray";
     newAccuracy.textContent = "--";
-    newAccuracy.style.backgroundColor = "gray"
+    newAccuracy.style.backgroundColor = "gray";
     let goal = kurtSentences[Math.floor(Math.random() * kurtSentences.length)];
     goalDisplay.textContent = goal;
     userText.textContent = "begin";
@@ -137,12 +137,22 @@ function displayAccuracy() {
   avgAccuracyDisplay.textContent = Math.round(stats.avgAccuracy());
 }
 function displayWPM() {
-  const avgWpmDisplay = document.querySelector("#avgWpmDisplay")
+  const avgWpmDisplay = document.querySelector("#avgWpmDisplay");
   let wpm = Math.round(
     goalDisplay.textContent.split(" ").length / (timer.duration / 60)
   );
   newWPM.textContent = wpm;
+  console.log(wpm, typeof wpm);
+  if (wpm >= 70) {
+    newWPM.style.backgroundColor = "green";
+  }
+  if (wpm < 70 && wpm >= 55) {
+    newWPM.style.backgroundColor = "yellow";
+  }
+  if (wpm < 54) {
+    newWPM.style.backgroundColor = "red";
+  }
   stats.addWPM(wpm);
-  console.log(stats.aywpmArrayay)
-  avgWpmDisplay.textContent = Math.round(stats.avgWPM())
+  console.log(stats.aywpmArrayay);
+  avgWpmDisplay.textContent = Math.round(stats.avgWPM());
 }
