@@ -96,9 +96,9 @@ let kurtSentences = [
 ];
 
 let kurtSentencesTest = [
-  "ree",
-  "ree",
-  'ree',
-  "ree",
-  "ree",
+  "test1",
+  "test2",
+  'test3',
+  "test4",
+  "test5",
 ];
